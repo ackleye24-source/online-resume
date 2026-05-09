@@ -58,7 +58,7 @@
     .highlight-icon { font-size: 28px; margin-bottom: 10px; display: block; }
     .highlight-label { font-size: 13px; color: rgba(230,237,243,0.7); line-height: 1.6; display: block; }
     .swiper-section { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; padding-bottom: 1.5rem; width: 100%; }
-    .swiper-stage { position: relative; width: 100%; max-width: 420px; height: 520px; overflow: visible; }
+    .swiper-stage { position: relative; width: 100%; max-width: 420px; height: 540px; overflow: visible; }
     .swiper-card { position: absolute; inset: 0; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 1.2rem; display: flex; flex-direction: column; will-change: transform; transform-origin: center 115%; transition: transform 0.42s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.42s ease, opacity 0.42s ease; cursor: grab; user-select: none; overflow: hidden; }
     .swiper-card[data-pos="0"] { transform: rotate(0deg) scale(1); z-index: 4; box-shadow: 0 24px 64px rgba(0,0,0,0.55); }
     .swiper-card[data-pos="1"] { transform: rotate(5deg) scale(0.97); z-index: 3; pointer-events: none; }
@@ -70,7 +70,7 @@
     .sc-icon { width: 54px; height: 54px; border-radius: 13px; flex-shrink: 0; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,0.45); }
     .sc-name { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; color: #fff; display: block; margin-bottom: 2px; }
     .sc-sub { font-size: 10px; color: var(--muted); display: block; margin-bottom: 5px; line-height: 1.4; }
-    .sc-screenshots { display: flex; gap: 5px; height: 180px; margin-top: auto; margin-bottom: 10px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+    .sc-screenshots { display: flex; gap: 5px; height: 175px; margin-bottom: 10px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
     .sc-shot { flex: 1; object-fit: cover; object-position: center top; border-radius: 8px; min-width: 0; display: block; pointer-events: none; }
     .app-badges { display: flex; gap: 4px; flex-wrap: wrap; }
     .app-badge { font-size: 9px; padding: 2px 7px; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -83,7 +83,7 @@
     .app-stats { display: flex; gap: 0.8rem; border-top: 1px solid var(--border); padding-top: 0.6rem; flex-wrap: wrap; }
     .app-stat-num { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff; display: block; }
     .app-stat-label { font-size: 9px; color: var(--muted); letter-spacing: 0.04em; display: block; }
-    .store-badges { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 8px; }
+    .store-badges { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
     .store-badge img { height: 36px; width: auto; display: block; }
     .store-badge { transition: transform 0.18s ease; display: inline-block; }
     .store-badge:hover { transform: scale(1.07); }
@@ -123,6 +123,7 @@
       .highlight-row { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
       .tl-dates { text-align: left; }
+      .swiper-stage { height: 580px; }
     }
   </style>
 </head>
@@ -133,14 +134,8 @@
     <div class="hero-name">Eric <span>Ackley</span></div>
     <span class="hero-title">Operations Leader &nbsp;&middot;&nbsp; Mobile App Developer &nbsp;&middot;&nbsp; Founder, EApps Development LLC</span>
     <div class="hero-contact">
-      <a class="contact-pill" href="tel:7083077082">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.958.713l.819 2.866a1 1 0 01-.544 1.174L4.5 7.5s.5 2 2 3.5 3.5 2 3.5 2l1.247-1.112a1 1 0 011.174-.544l2.866.819A1 1 0 0114 13.121V14a1.5 1.5 0 01-1.5 1.5C6.354 15.5.5 9.646.5 3.5A1.5 1.5 0 012 2v1.5z"/></svg>
-        708-307-7082
-      </a>
-      <a class="contact-pill" href="mailto:ackleye24@gmail.com">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M1 3.5l7 5 7-5"/></svg>
-        ackleye24@gmail.com
-      </a>
+      <a class="contact-pill" href="tel:7083077082"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.958.713l.819 2.866a1 1 0 01-.544 1.174L4.5 7.5s.5 2 2 3.5 3.5 2 3.5 2l1.247-1.112a1 1 0 011.174-.544l2.866.819A1 1 0 0114 13.121V14a1.5 1.5 0 01-1.5 1.5C6.354 15.5.5 9.646.5 3.5A1.5 1.5 0 012 2v1.5z"/></svg>708-307-7082</a>
+      <a class="contact-pill" href="mailto:ackleye24@gmail.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M1 3.5l7 5 7-5"/></svg>ackleye24@gmail.com</a>
       <a class="contact-pill" href="https://getsafeguard.app" target="_blank">getsafeguard.app</a>
       <a class="contact-pill" href="https://takemyspot.net" target="_blank">takemyspot.net</a>
       <span class="contact-pill">Tinley Park, IL</span>
@@ -161,24 +156,21 @@
 
   <div class="content-wrap">
 
-    <!-- OVERVIEW -->
     <div class="tab-panel active" id="tab-summary">
       <div class="section-label">Profile</div>
-      <div class="summary-card">Technology-forward operations leader with <strong>15+ years managing high-volume production environments</strong> and a proven track record of shipping real-world mobile applications. Founded <strong>EApps Development LLC</strong>, with 4 published apps across App Store and Google Play &mdash; including Safeguard (real-time child safety), TakeMySpot (parking marketplace), SchedulerMVP (workforce scheduling), and PowerPilot (Tesla Powerwall automation). Uniquely positioned at the intersection of <strong>operations management and modern software development</strong>, leveraging a Flutter/Supabase/Vercel/Stripe/RevenueCat stack and hands-on AI implementation experience to deliver solutions that bridge the gap between the plant floor and the digital economy.</div>
+      <div class="summary-card">Technology-forward operations leader with <strong>15+ years managing high-volume production environments</strong> and a proven track record of shipping real-world mobile applications. Founded <strong>EApps Development LLC</strong>, with 4 published apps across App Store and Google Play &mdash; including Safeguard (real-time child safety), TakeMySpot (parking marketplace), SchedulerMVP (workforce scheduling), and PowerPilot (Tesla Powerwall automation). Uniquely positioned at the intersection of <strong>operations management and modern software development</strong>, leveraging a Flutter/Supabase/Vercel/Stripe/RevenueCat stack and hands-on AI implementation experience.</div>
       <div class="highlight-row">
         <div class="highlight-card"><span class="highlight-icon">&#9881;&#65039;</span><span class="highlight-label">Managed teams of up to 100 in continuous high-volume production environments</span></div>
-        <div class="highlight-card"><span class="highlight-icon">&#128241;</span><span class="highlight-label">Self-taught Flutter developer with 4 live apps on App Store &amp; Google Play</span></div>
+        <div class="highlight-card"><span class="highlight-icon">&#128241;</span><span class="highlight-label">Self-taught developer with 4 live apps on App Store &amp; Google Play</span></div>
         <div class="highlight-card"><span class="highlight-icon">&#129302;</span><span class="highlight-label">Hands-on AI implementation &amp; self-hosted LLM experience across multiple platforms</span></div>
       </div>
     </div>
 
-    <!-- APPS -->
     <div class="tab-panel" id="tab-apps">
       <div class="section-label">Published Applications</div>
       <div class="swiper-section">
         <div class="swiper-stage" id="appSwiper">
 
-          <!-- Card 0: Safeguard -->
           <div class="swiper-card" data-pos="0">
             <div class="sc-header">
               <div style="flex:1;min-width:0;">
@@ -187,11 +179,16 @@
                 <div class="app-badges"><span class="app-badge badge-live">Live</span><span class="app-badge badge-ios">iOS</span></div>
               </div>
             </div>
+            <div class="sc-screenshots">
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f6/2b/4a/f62b4a00-b4a4-4c4a-8c4a-4c4a4c4a4c4a/01.png/230x500bb.png" onerror="this.parentElement.style.display='none'" alt="Safeguard alerts" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a1/b2/c3/a1b2c3d4-e5f6-7890-abcd-ef1234567890/02.png/230x500bb.png" onerror="this.parentElement.style.display='none'" alt="Location tracking" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d4/e5/f6/d4e5f6a7-b8c9-0123-4567-89abcdef0123/03.png/230x500bb.png" onerror="this.parentElement.style.display='none'" alt="Safe zones" />
+            </div>
             <div class="skill-tags"><span class="skill-tag">Flutter</span><span class="skill-tag">Supabase</span><span class="skill-tag">PostGIS</span><span class="skill-tag">Vercel</span><span class="skill-tag">RevenueCat</span><span class="skill-tag">Apple IAP</span></div>
-            <ul class="tl-bullets" style="margin-bottom:10px;">
+            <ul class="tl-bullets" style="margin-bottom:10px;flex:1;">
               <li>Instant push alerts when a child enters proximity of a sex offender or leaves a geofence &mdash; even from a locked phone</li>
-              <li>Cross-references NSOPW registry in real time &mdash; 900K+ offenders, sub-3-second alert delivery</li>
-              <li>Features: real-time GPS, custom safe/danger zones, one-tap SOS, co-parent access, 30&ndash;90 day history</li>
+              <li>Cross-references NSOPW in real time &mdash; 900K+ offenders tracked, sub-3-second alert delivery</li>
+              <li>GPS tracking, custom safe/danger zones, one-tap SOS, co-parent access, 30&ndash;90 day history</li>
               <li>Tiers: Free / Premium $9.99/mo (2 profiles) / Family $14.99/mo (5 profiles + priority alerts)</li>
             </ul>
             <div class="app-stats">
@@ -204,7 +201,6 @@
             </div>
           </div>
 
-          <!-- Card 1: TakeMySpot -->
           <div class="swiper-card" data-pos="1">
             <div class="sc-header">
               <div style="flex:1;min-width:0;">
@@ -213,12 +209,17 @@
                 <div class="app-badges"><span class="app-badge badge-live">Live</span><span class="app-badge badge-ios">iOS</span><span class="app-badge badge-android">Android</span></div>
               </div>
             </div>
+            <div class="sc-screenshots">
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/87/50/72/875072cc-e432-4322-ee76-bdc3f51d9dac/01.png/230x500bb.png" alt="Premium Parking" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/56/55/52/56555256-741a-e34f-5997-fd94587e4b08/02.png/230x500bb.png" alt="Find Spot" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/53/bf/0c/53bf0cac-3557-14f3-1cb8-fd7b91476833/04.png/230x500bb.png" alt="Earnings" />
+            </div>
             <div class="skill-tags"><span class="skill-tag">Flutter</span><span class="skill-tag">Stripe</span><span class="skill-tag">Apple Pay</span><span class="skill-tag">Google Pay</span><span class="skill-tag">Web Admin</span></div>
-            <ul class="tl-bullets" style="margin-bottom:10px;">
+            <ul class="tl-bullets" style="margin-bottom:10px;flex:1;">
               <li>Enables condo/apartment residents to monetize empty parking spots &mdash; owners average $150+/month</li>
-              <li>80/20 payout model: owners keep 80%; Stripe payments with Apple Pay &amp; Google Pay support</li>
+              <li>80/20 payout model: owners keep 80%; Stripe with Apple Pay &amp; Google Pay support</li>
               <li>Free web admin dashboard for building managers: residents, spots, assignments, revenue &mdash; zero cost to building</li>
-              <li>Supports dynamic event-day pricing (Bears games, Soldier Field concerts); invite-only resident onboarding</li>
+              <li>Dynamic event-day pricing (Bears games, Soldier Field concerts); invite-only resident onboarding</li>
             </ul>
             <div class="app-stats">
               <div><span class="app-stat-num">$150+</span><span class="app-stat-label">Avg/mo earned</span></div>
@@ -230,7 +231,6 @@
             </div>
           </div>
 
-          <!-- Card 2: SchedulerMVP -->
           <div class="swiper-card" data-pos="2">
             <div class="sc-header">
               <div style="flex:1;min-width:0;">
@@ -239,11 +239,16 @@
                 <div class="app-badges"><span class="app-badge badge-live">Live</span><span class="app-badge badge-ios">iOS</span><span class="app-badge badge-mac">Mac</span></div>
               </div>
             </div>
+            <div class="sc-screenshots">
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/b1/80/22b180e0-5c0e-511c-ac69-7ac4d127e72e/01.png/230x500bb.png" alt="Smart Scheduling" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/75/ff/b775ff0b-6edc-f250-226a-31c6d51eb998/02.png/230x500bb.png" alt="Schedule View" />
+              <img class="sc-shot" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c1/d7/31/c1d7315a-c18b-907a-501b-db1c439c83b1/03.png/230x500bb.png" alt="Team View" />
+            </div>
             <div class="skill-tags"><span class="skill-tag">Flutter</span><span class="skill-tag">Push Notifications</span><span class="skill-tag">PDF Export</span><span class="skill-tag">Auto-fill</span></div>
-            <ul class="tl-bullets" style="margin-bottom:10px;">
+            <ul class="tl-bullets" style="margin-bottom:10px;flex:1;">
               <li>Shift creation, time-off requests, team messaging, and real-time push notifications in one place</li>
               <li>Two-step shift swap approval: employee-to-employee first, then manager final sign-off</li>
-              <li>v1.2: Smart Auto-fill scheduling, conflict detection (overlapping shifts, clopen warnings), role eligibility controls</li>
+              <li>v1.2: Smart Auto-fill scheduling, conflict detection (overlapping shifts, clopen warnings), role eligibility</li>
               <li>PDF-exportable reports with wage estimates; privacy-first &mdash; data not collected</li>
             </ul>
             <div class="app-stats">
@@ -256,7 +261,6 @@
             </div>
           </div>
 
-          <!-- Card 3: PowerPilot -->
           <div class="swiper-card" data-pos="3">
             <div class="sc-header">
               <div style="flex:1;min-width:0;">
@@ -265,23 +269,26 @@
                 <div class="app-badges"><span class="app-badge badge-live">Live</span><span class="app-badge badge-mac">Mac</span><span class="app-badge badge-ios">iOS</span></div>
               </div>
             </div>
+            <div class="sc-screenshots" style="height:200px;">
+              <img class="sc-shot" src="https://raw.githubusercontent.com/ackleye24-source/online-resume/main/powerpilot-status.png" onerror="this.style.background='linear-gradient(135deg,#0d1a2d,#1a56db22)';this.style.display='block'" alt="PowerPilot Status" />
+              <img class="sc-shot" src="https://raw.githubusercontent.com/ackleye24-source/online-resume/main/powerpilot-automations.png" onerror="this.style.background='linear-gradient(135deg,#0d1a2d,#1a56db22)';this.style.display='block'" alt="PowerPilot Automations" />
+            </div>
             <div class="skill-tags"><span class="skill-tag">Swift</span><span class="skill-tag">Tesla API</span><span class="skill-tag">ComEd Pricing</span><span class="skill-tag">Automation</span><span class="skill-tag">Energy AI</span></div>
-            <ul class="tl-bullets" style="margin-bottom:10px;">
-              <li>Real-time Powerwall 3 status: battery %, power flow (grid / Powerwall / home), and live ComEd hourly pricing</li>
-              <li>Smart automations: grid charging on schedule, dynamic mode switching (Self-Powered / Time-Based / Backup-Only)</li>
-              <li>Vehicle-aware backup reserve &mdash; automatically raises reserve % when EV charging starts, resets on stop</li>
-              <li>ComEd Dynamic rule: auto-switches to Self-Powered when real-time price exceeds threshold (e.g. &gt;8&cent;/kWh)</li>
-              <li>7-rule daily schedule with full CRUD &mdash; built for energy cost optimization in ComEd hourly pricing territory</li>
+            <ul class="tl-bullets" style="margin-bottom:10px;flex:1;">
+              <li>Real-time Powerwall 3 status: battery %, power flow (grid / Powerwall / home), live ComEd hourly pricing</li>
+              <li>Smart automations: scheduled grid charging, dynamic mode switching (Self-Powered / Time-Based / Backup-Only)</li>
+              <li>Vehicle-aware backup reserve &mdash; auto-raises reserve % when EV charging starts, resets on stop</li>
+              <li>ComEd Dynamic rule: auto-switches to Self-Powered when real-time price exceeds threshold (&gt;8&cent;/kWh)</li>
+              <li>7-rule daily schedule with full CRUD &mdash; built for ComEd hourly pricing territory</li>
             </ul>
             <div class="app-stats">
-              <div><span class="app-stat-num">Live</span><span class="app-stat-label">Status</span></div>
               <div><span class="app-stat-num">7</span><span class="app-stat-label">Automation rules</span></div>
               <div><span class="app-stat-num">Real-time</span><span class="app-stat-label">ComEd pricing</span></div>
+              <div><span class="app-stat-num">0.6&cent;</span><span class="app-stat-label">Current rate</span></div>
             </div>
           </div>
 
         </div>
-
         <div class="swiper-controls">
           <button class="swiper-btn" onclick="swiperPrev()">&#8592;</button>
           <div class="swiper-dots">
@@ -296,7 +303,6 @@
       </div>
     </div>
 
-    <!-- EXPERIENCE -->
     <div class="tab-panel" id="tab-experience">
       <div class="section-label">Work History</div>
       <div class="timeline-item">
@@ -328,7 +334,7 @@
             <li>Converted facility operations to an 80/20 model while maintaining model factory standards</li>
             <li>Implemented 6S methodology across the entire production floor</li>
             <li>Conducted 30/60/90-day performance reviews and annual hourly employee evaluations</li>
-            <li>Applied positive reinforcement-based discipline system: clear performance expectations, collaborative corrective action planning, and behavior-based recognition</li>
+            <li>Applied positive reinforcement-based discipline: clear expectations, collaborative corrective action, and behavior-based recognition</li>
           </ul>
         </div>
       </div>
@@ -362,7 +368,6 @@
       </div>
     </div>
 
-    <!-- SKILLS -->
     <div class="tab-panel" id="tab-skills">
       <div class="section-label">Technical Stack</div>
       <div class="skills-grid">
@@ -382,7 +387,7 @@
       </div>
     </div>
 
-  </div><!-- /content-wrap -->
+  </div>
 
   <footer class="resume-footer">
     <span>&copy; 2026 Eric Ackley &middot; EApps Development LLC</span>
@@ -395,104 +400,56 @@
   </footer>
 
   <script>
-    var currentTab = 'summary';
-    var tabAnimating = false;
+    var currentTab = 'summary', tabAnimating = false;
     function showTab(id, btn) {
-      if (id === currentTab || tabAnimating) return;
-      tabAnimating = true;
-      var oldPanel = document.getElementById('tab-' + currentTab);
-      var newPanel = document.getElementById('tab-' + id);
-      oldPanel.style.animation = 'fadeSlideOut 0.2s cubic-bezier(0.4,0,0.2,1) both';
-      setTimeout(function () {
-        oldPanel.style.animation = '';
-        oldPanel.classList.remove('active');
-        newPanel.classList.add('active');
-        tabAnimating = false;
-      }, 200);
-      document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      currentTab = id;
+      if (id === currentTab || tabAnimating) return; tabAnimating = true;
+      var o = document.getElementById('tab-'+currentTab), n = document.getElementById('tab-'+id);
+      o.style.animation = 'fadeSlideOut 0.2s ease both';
+      setTimeout(function(){ o.style.animation=''; o.classList.remove('active'); n.classList.add('active'); tabAnimating=false; }, 200);
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); }); btn.classList.add('active'); currentTab=id;
     }
-
-    (function () {
-      var stage = document.getElementById('appSwiper');
-      if (!stage) return;
-      var cards = Array.from(stage.querySelectorAll('.swiper-card'));
-      var dots = Array.from(document.querySelectorAll('.swiper-dot'));
-      var order = [0, 1, 2, 3];
-      var busy = false;
-      var dragActive = false, dragStartX = 0, dragDx = 0;
-
-      function applyPositions(instant) {
-        cards.forEach(function (card, i) {
-          var pos = order.indexOf(i);
-          if (instant) card.style.transition = 'none';
-          card.dataset.pos = pos;
-          card.style.transform = '';
-          if (instant) requestAnimationFrame(function () { card.style.transition = ''; });
-        });
-        syncDots();
+    (function(){
+      var stage=document.getElementById('appSwiper'); if(!stage) return;
+      var cards=Array.from(stage.querySelectorAll('.swiper-card'));
+      var dots=Array.from(document.querySelectorAll('.swiper-dot'));
+      var order=[0,1,2,3], busy=false, dragActive=false, dragStartX=0, dragDx=0;
+      function applyPositions(){
+        cards.forEach(function(c,i){ c.dataset.pos=order.indexOf(i); c.style.transform=''; });
+        dots.forEach(function(d,i){ d.classList.toggle('active',order[0]===i); });
       }
-      function syncDots() { dots.forEach(function (dot, i) { dot.classList.toggle('active', order[0] === i); }); }
-
-      function advance(flyClass) {
-        if (busy) return; busy = true;
-        var topCard = cards[order[0]];
-        topCard.classList.add(flyClass);
-        var nextTop = order[1];
-        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === nextTop); });
-        setTimeout(function () {
-          topCard.classList.remove(flyClass);
-          var gone = order.shift(); order.push(gone);
-          applyPositions(true); busy = false;
-        }, 420);
+      function advance(fc){
+        if(busy)return; busy=true;
+        var top=cards[order[0]]; top.classList.add(fc);
+        dots.forEach(function(d,i){ d.classList.toggle('active',i===order[1]); });
+        setTimeout(function(){ top.classList.remove(fc); order.push(order.shift()); applyPositions(); busy=false; },420);
       }
-      function retreat() {
-        if (busy) return; busy = true;
-        var came = order.pop(); order.unshift(came);
-        var topCard = cards[order[0]];
-        topCard.style.transition = 'none';
-        topCard.classList.add('fly-right');
-        topCard.dataset.pos = '0';
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            topCard.style.transition = '';
-            topCard.classList.remove('fly-right');
-            syncDots();
-            setTimeout(function () { busy = false; }, 420);
-          });
-        });
+      function retreat(){
+        if(busy)return; busy=true;
+        order.unshift(order.pop());
+        var top=cards[order[0]]; top.style.transition='none'; top.classList.add('fly-right'); top.dataset.pos='0';
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){
+          top.style.transition=''; top.classList.remove('fly-right');
+          dots.forEach(function(d,i){ d.classList.toggle('active',order[0]===i); });
+          setTimeout(function(){ busy=false; },420);
+        }); });
       }
-
-      window.swiperNext = function () { advance('fly-left'); };
-      window.swiperPrev = function () { retreat(); };
-      window.swiperGoTo = function (targetIdx) {
-        if (order[0] === targetIdx || busy) return;
-        var pos = order.indexOf(targetIdx);
-        if (pos === 1) advance('fly-left');
-        else if (pos === 2) { advance('fly-left'); setTimeout(function () { advance('fly-left'); }, 460); }
-        else if (pos === 3) { advance('fly-left'); setTimeout(function () { advance('fly-left'); }, 460); setTimeout(function () { advance('fly-left'); }, 920); }
+      window.swiperNext=function(){ advance('fly-left'); };
+      window.swiperPrev=function(){ retreat(); };
+      window.swiperGoTo=function(t){
+        if(order[0]===t||busy)return;
+        var p=order.indexOf(t);
+        for(var i=0;i<p;i++) setTimeout(function(){ advance('fly-left'); },i*460);
       };
-
-      function onDragStart(x) { if (busy) return; dragActive = true; dragStartX = x; dragDx = 0; cards[order[0]].classList.add('dragging'); }
-      function onDragMove(x) {
-        if (!dragActive) return; dragDx = x - dragStartX;
-        cards[order[0]].style.transform = 'translateX(' + dragDx + 'px) rotate(' + (dragDx * 0.07) + 'deg)';
-      }
-      function onDragEnd() {
-        if (!dragActive) return; dragActive = false;
-        var top = cards[order[0]]; top.classList.remove('dragging');
-        if (Math.abs(dragDx) > 80) { top.style.transform = ''; advance(dragDx > 0 ? 'fly-right' : 'fly-left'); }
-        else { top.style.transform = ''; }
-        dragDx = 0;
-      }
-      stage.addEventListener('mousedown', function (e) { if (e.target.closest('a')) return; e.preventDefault(); onDragStart(e.clientX); });
-      window.addEventListener('mousemove', function (e) { onDragMove(e.clientX); });
-      window.addEventListener('mouseup', function () { onDragEnd(); });
-      stage.addEventListener('touchstart', function (e) { if (e.target.closest('a')) return; onDragStart(e.touches[0].clientX); }, {passive:true});
-      window.addEventListener('touchmove', function (e) { if (!dragActive) return; e.preventDefault(); onDragMove(e.touches[0].clientX); }, {passive:false});
-      window.addEventListener('touchend', function () { onDragEnd(); });
-      applyPositions(true);
+      function onStart(x){ if(busy)return; dragActive=true; dragStartX=x; dragDx=0; cards[order[0]].classList.add('dragging'); }
+      function onMove(x){ if(!dragActive)return; dragDx=x-dragStartX; cards[order[0]].style.transform='translateX('+dragDx+'px) rotate('+(dragDx*0.07)+'deg)'; }
+      function onEnd(){ if(!dragActive)return; dragActive=false; var top=cards[order[0]]; top.classList.remove('dragging'); if(Math.abs(dragDx)>80){ top.style.transform=''; advance(dragDx>0?'fly-right':'fly-left'); } else { top.style.transform=''; } dragDx=0; }
+      stage.addEventListener('mousedown',function(e){ if(e.target.closest('a'))return; e.preventDefault(); onStart(e.clientX); });
+      window.addEventListener('mousemove',function(e){ onMove(e.clientX); });
+      window.addEventListener('mouseup',function(){ onEnd(); });
+      stage.addEventListener('touchstart',function(e){ if(e.target.closest('a'))return; onStart(e.touches[0].clientX); },{passive:true});
+      window.addEventListener('touchmove',function(e){ if(!dragActive)return; e.preventDefault(); onMove(e.touches[0].clientX); },{passive:false});
+      window.addEventListener('touchend',function(){ onEnd(); });
+      applyPositions();
     })();
   </script>
 </body>
